@@ -1,0 +1,161 @@
+
+
+
+
+
+
+body{
+
+
+background-image: linear-gradient(to bottom, rgb(7, 6, 6), rgb(255, 0, 157), rgb(5, 204, 194));
+background-size: 100%;
+height: 2000px;
+
+
+
+
+
+}
+
+#link1{
+
+width: 200px;
+height: 240px;
+background-color: rgb(11, 16, 87);
+margin-top: 440px;
+margin-left: 10%;
+box-shadow: 6px 4px rgb(14, 14, 14);
+border-radius: 25px;
+
+color: rgb(12, 9, 9);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: center;
+font-size: x-large;
+
+padding: 10px;
+
+}
+#link1 a{
+
+text-decoration: none;
+text-shadow: rgb(248, 248, 248);
+color: rgb(191, 164, 240);
+position: bottom;
+}
+
+
+#link1:hover{
+
+
+width: 210px;
+height: 240px;
+background-color: rgb(8, 79, 150);
+color: black;
+
+
+}
+
+
+#Bilde1{
+
+    
+    margin-top:-630px;
+    position: fixed;
+    animation-name: bildefade;
+    animation-delay: 5s;
+    animation-duration: 200s;
+    
+}
+
+
+@keyframes bildefade{
+
+
+0% {background-color: transparent;}
+2% {background-color: transparent; margin-top: 0px; }
+4% {background-color: transparent; margin-top: 10px;}
+100% {background-image: linear-gradient(0,0,0,0.01);}
+
+
+
+}
+
+#Title{
+
+color: rgb(0, 0, 0);
+font-size: xx-large;
+text-align: center;
+font-family: fantasy;
+font-style: italic;
+border: solid;
+background-color: rgb(85, 3, 85);
+font-size: xx-large;
+margin-left: 340px;
+
+
+
+}
+
+#Title :hover{
+
+color:rgb(46, 139, 192);
+background-color: rgb(46, 139, 192);
+
+
+}
+
+
+
+
+
+
+
+#Title{
+  
+    width: 540px;
+    height: 150px;
+    background-color:transparent;
+    color: rgb(255, 255, 255);
+    position: relative;
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    margin-top: 0%;
+    margin-left: 10px;
+    
+  }
+  
+  @keyframes example {
+    0%   {background-color:rgb(0, 0, 0); left:-500px; top:0px;}
+    0%   {color: rgb(0, 0, 0);}
+    25%  {color: rgb(194, 4, 146);}
+    25%  {background-color:rgba(0, 0, 0, 0); left:200px; top:0px;}
+    50%  {color: rgb(255, 255, 255);}
+    30%  {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+    75%  {color: rgb(255, 255, 255);}
+    75%  {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+    100% {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+
+    
+}
+
+
+
+
+#refreshlink{
+
+
+border:solid;
+size: 10px 100px;
+max-width: 80px;
+background-color: rgb(0, 0, 0);
+color: rgb(108, 23, 134);
+
+
+}
+
+
+
+
+
+
