@@ -1,0 +1,94 @@
+body{
+
+    background-image: linear-gradient(to bottom, rgb(255, 0, 157), rgb(5, 204, 194),rgb(7, 6, 6));
+    background-size: 100%;
+
+
+
+}
+
+#overskrift{
+
+border: solid;
+background-color: rgba(0, 0, 0, 0.363);
+margin-left: 500px;
+margin-right: 500px;
+text-align: center;
+font-size: x-large;
+
+}
+
+#Tilbakelink{
+
+    font-size: large;
+    text-align: center;
+    border: solid;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.418);
+    margin-top: -100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+
+}
+
+#Tilbakelink a{
+    color: rgb(248, 108, 194);
+    text-decoration: none;
+
+}
+
+#Tilbakelink:hover{
+
+    background-color: black;
+    color: rgb(255, 255, 255);
+
+
+}
+
+
+	
+
+
+body {
+	margin: 0;
+    height: 1500px;
+	font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    background-repeat: no-repeat;
+    font-size: large;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+
+#Liste{
+
+margin-top: 6   00px;
+margin-left: 400px;
+
+}
+
