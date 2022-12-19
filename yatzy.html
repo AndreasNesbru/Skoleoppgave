@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #dices img {
+
+      width: 150px;
+      height: 150px;
+
+    }
+
+    #tabell {
+      display: flex;
+      justify-content: left;
+      margin-top: 50px;
+
+    }
+
+    td {
+      border: 2px solid rgb(75, 4, 4);
+      width: 85px;
+    }
+
+    th {
+      max-width: 50px;
+      min-width: 50px;
+
+
+    }
+
+    #top-rad {
+      border: 2px solid rgb(32, 30, 30);
+      background-color: rgb(102, 102, 158);
+
+    }
+
+    .farge-rad {
+      background-color: rgb(238, 92, 92);
+    }
+
+    .h1 {
+
+      font-size: xx-large;
+      text-align: center;
+      text-decoration: bold;
+      text-decoration: underline;
+      color: black;
+    }
+
+    #Knapper {
+
+      size: 50px 10px;
+      color: darkblue;
+    }
+  </style>
+
+</head>
+
+<body style="background-image: linear-gradient(to bottom, rgb(211, 17, 195), rgb(32, 237, 252),rgb(212, 194, 26));">
+
+  <h1> YATZY </h1>
+
+  <br>
+  <br>
+
+  </div>
+  <p id="nullKast" style="text-align: center; color: transparent; ">Du er tom for kast</p>
+
+  <!-- Kaste knappen. -->
+  <div id="knapper">
+    <button id="kastKnapp" onclick="kast()">Kast</button>
+
+  </div>
+  <!-- her legger jeg inn alle ternings bildene og gir dem id-er og clasifiserer dem. I tillegg gjør jeg dem til knapper som gjør de røde.  -->
+  <div id="dices" style="visibility: hidden;">
+    <img src="./terning1.png" id="terning1" class="terningene" onclick="checkColor(1)">
+    <img src="./terning2.png" id="terning2" class="terningene" onclick="checkColor(2)">
+    <img src="./terning3.png" id="terning3" class="terningene" onclick="checkColor(3)">
+    <img src="./terning4.png" id="terning4" class="terningene" onclick="checkColor(4)">
+    <img src="./terning5.png" id="terning5" class="terningene" onclick="checkColor(5)">
+  </div>
+  <div id="Knapper">
+    <button id="resetKnapp" onclick="resetKast()" style="display: none;">Ny runde</button>
+  </div>
+
+
+  <div id="tabell">
+    <table>
+      <thead>
+        <th id="top-rad">Yatzy</th>
+
+
+      </thead>
+      <tbody>
+        <tr>
+          <td>Enere</td>
+          <td class="rad1" onclick="poengsum(1, 1)"></td>
+
+
+        </tr>
+        <tr>
+          <td>Toere</td>
+          <td class="rad2" onclick="poengsum(2, 1)"></td>
+
+
+        </tr>
+        <tr>
+          <td>Treere</td>
+          <td class="rad3" onclick="poengsum(3, 1)"></td>
+
+
+        </tr>
+        <tr>
+          <td>Firere</td>
+          <td class="rad4" onclick="poengsum(4, 1)"></td>
+
+        </tr>
+        <tr>
+          <td>Femere</td>
+          <td class="rad5" onclick="poengsum(5, 1)"></td>
+
+        </tr>
+        <tr>
+          <td>Seksere</td>
+          <td class="rad6" onclick="poengsum(6, 1)"></td>
+        </tr>
+        <tr>
+          <td class="farge-rad">Sum</td>
+          <td class="rad7" id="sum1"></td>
+        </tr>
+        <tr>
+          <td class="rad8">Bonus</td>
+          <td class="rad8"></td>
+        </tr>
+        <tr>
+          <td>1 par</td>
+          <td class="rad9"></td>
+        </tr>
+        <tr>
+          <td>2 par</td>
+          <td class="rad10"></td>
+
+        </tr>
+        <tr>
+          <td>tre like</td>
+          <td class="rad11"></td>
+
+        </tr>
+        <tr>
+          <td>fire like</td>
+          <td class="rad12"></td>
+
+        </tr>
+        <tr>
+          <td>Liten straight</td>
+          <td class="rad13"></td>
+
+        </tr>
+        <tr>
+          <td>Stor straight</td>
+          <td class="rad14"></td>
+
+        </tr>
+        <tr>
+          <td>Hus</td>
+          <td class="rad15"></td>
+
+        </tr>
+        <tr>
+          <td>Sjanse</td>
+          <td class="rad16"></td>
+
+        </tr>
+        <tr>
+          <td>YATZY</td>
+          <td class="rad17"></td>
+
+        </tr>
+        <tr>
+          <td class="farge-rad">Total sum</td>
+          <td class="rad18"></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <script>
+    // Her legger jeg inn alle radene i js , men jeg ble ikke ferdig å fikk de ikke til å funke.
+    const radene = [
+      document.getElementsByClassName("rad1"),
+      document.getElementsByClassName("rad2"),
+      document.getElementsByClassName("rad3"),
+      document.getElementsByClassName("rad4"),
+      document.getElementsByClassName("rad5"),
+      document.getElementsByClassName("rad6"),
+      document.getElementsByClassName("rad7"),
+      document.getElementsByClassName("rad8"),
+      document.getElementsByClassName("rad9"),
+      document.getElementsByClassName("rad10"),
+      document.getElementsByClassName("rad11"),
+      document.getElementsByClassName("rad12"),
+      document.getElementsByClassName("rad13"),
+      document.getElementsByClassName("rad14"),
+      document.getElementsByClassName("rad15"),
+      document.getElementsByClassName("rad16"),
+      document.getElementsByClassName("rad17"),
+      document.getElementsByClassName("rad18")
+    ];
+    //Tar alle id-ene fra html som skal brukes inn til js
+    document.getElementById("terning1");
+    document.getElementById("terning2");
+    document.getElementById("terning3");
+    document.getElementById("terning4");
+    document.getElementById("terning5");
+    document.getElementById("resetKnapp");
+    document.getElementById("nullKast");
+    document.getElementById("kastKnapp");
+
+    // Fikk alldri sumeringen i radene til å funke. Hadde ikke nokk tid
+
+
+    // Bildene av terningene som jeg skal bruke
+    const bilderAvTerning = [
+      "./terning1.png",
+      "./terning2.png",
+      "./terning3.png",
+      "./terning4.png",
+      "./terning5.png",
+      "./terning6.png"
+    ];
+
+
+
+
+    function terningResultat() {
+      return Math.floor(Math.random() * bilderAvTerning.length);
+    }
+
+
+    var counter = 0;
+    var terning1verdi = 0;
+    var terning2verdi = 0;
+    var terning3verdi = 0;
+    var terning4verdi = 0;
+    var terning5verdi = 0;
+
+
+    function poengsumEnere() {
+      for (i = 1; i < bilderAvTerning.length; i++) {
+        if (document.getElementById(`terning${i}`).style.backgroundColor == "red") {
+
+        }
+      }
+    }
+
+    // gJør terningene synlige når man trykker på knappen og kaster alle terningene hvis de ikke er røde
+    function kast() {
+      document.getElementById("dices").style.visibility = "visible";
+      counter++;
+      if (counter < 4) {
+        if (terning1.style.backgroundColor != "red") {
+          var terningresultatet = terningResultat();
+          terning1.src = bilderAvTerning[terningresultatet];
+          terning1verdi = terningresultatet + 1;
+        }
+        if (terning2.style.backgroundColor != "red") {
+          var terningresultatet = terningResultat();
+          terning2.src = bilderAvTerning[terningresultatet];
+          terning2verdi = terningresultatet + 1;
+        }
+        if (terning3.style.backgroundColor != "red") {
+          var terningresultatet = terningResultat();
+          terning3.src = bilderAvTerning[terningresultatet];
+          terning3verdi = terningresultatet + 1;
+        }
+        if (terning4.style.backgroundColor != "red") {
+          var terningresultatet = terningResultat();
+          terning4.src = bilderAvTerning[terningresultatet];
+          terning4verdi = terningresultatet + 1;
+        }
+        if (terning5.style.backgroundColor != "red") {
+          var terningresultatet = terningResultat();
+          terning5.src = bilderAvTerning[terningresultatet];
+          terning5verdi = terningresultatet + 1;
+        }
+
+
+
+        
+        console.log(terning1verdi);
+        console.log(terning2verdi);
+        console.log(terning3verdi);
+        console.log(terning4verdi);
+        console.log(terning5verdi);
+      }
+      else {
+        visResetKnapp();
+      }
+    }
+    function resetKast() {
+      for (let i = 0; i < terningene.length; i++) {
+        terningene[i].style.backgroundColor = "";
+      }
+      counter = 0
+      resetKnapp.style.display = "none";
+      nullKast.style.color = "transparent";
+      kastKnapp.disabled = false;
+      dices.style.visibility = "hidden";
+    }
+
+    var erred = false;
+    function checkColor(terning) {
+      if (erred == false) {
+        terningene[terning - 1].style.backgroundColor = "red";
+        erred = true;
+      }
+      else {
+        terningene[terning - 1].style.backgroundColor = "";
+        erred = false;
+      }
+    }
+    var terningene = document.getElementsByClassName("terningene");
+    //Gjør at alle terningene får hvit bakgrunn
+    for (let i = 0; i < terningene.length; i++) {
+      terningene[i].style.backgroundColor = "";
+    }
+
+
+
+  //En funksjon som gjør at reset knappen blir synelig 
+    function visResetKnapp() {
+      resetKnapp.style.display = "block";
+      nullKast.style.color = "black";
+      kastKnapp.disabled = true;
+    }
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
