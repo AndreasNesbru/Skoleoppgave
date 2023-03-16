@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Business Card Maker</title>
+    <link rel="stylesheet" type="text/css" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: relative;
+
+
+        }
+
+        button {
+
+            position: absolute;
+            margin-left: 1000px;
+
+        }
+
+
+        .bilde {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .name {
+            top: 20px;
+            position: absolute;
+        }
+
+        .title {
+
+            position: absolute;
+            top: 80px;
+        }
+
+        .contact {
+            top: 120px;
+            position: absolute;
+        }
+
+        .gender {
+            top: 190px;
+            position: absolute;
+
+
+        }
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        input[type=text] {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        input[type=button] {
+            background-color: #af664c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #farge {
+            margin: 20px;
+        }
+
+        #imagePreview {
+
+            height: 200px;
+            width: 200px;
+            margin-left: 350px;
+            object-fit: contain;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+
+            <img id="imagePreview">
+
+            <div class="name">
+                <h1 id="name">Navn</h1>
+            </div>
+            <div class="title">
+                <p id="title">Tittel</p>
+            </div>
+            <div class="contact">
+                <p id="email">Email</p>
+                <p id="phone">Number</p>
+            </div>
+            <div class="gender">
+                <p id="gender">Gender</p>
+            </div>
+            <div class="age">
+                <p id="age">Age</p>
+            </div>
+            <div class="question">
+                <p id="question">Question</p>
+            </div>
+
+        </div>
+        <form>
+            <h2>Lagg kortet ditt!</h2>
+            <label for="name">Navn:</label>
+            <input type="text" id="nameInput" name="name"><br>
+
+            <label for="title">Title:</label>
+            <input type="text" id="titleInput" name="title"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="emailInput" name="email"><br>
+
+            <label for="phone">Nummer:</label>
+            <input type="number" id="phoneInput" name="phone"><br>
+
+            <label for="gender">Kjønn:</label>
+            <select id="genderInput" name="gender">
+                <option value="male">Mann</option>
+                <option value="female">Dame</option>
+            </select><br>
+
+            <label for="age">Alder:</label>
+            <input type="date" id="ageInput" name="age"><br>
+
+            <label for="question">Førerkort:</label>
+            <select id="questionInput" name="question">
+                <option value="Førerkort: Ja">Ja</option>
+                <option value="Førerkort: Nei"> Nei</option>
+                <option value="Førerkort: Motorsykkel"> Motorcycle</option>
+            </select><br>
+
+
+            <label for="farge">Velg farge:</label>
+            <input type="color" id="fargeInput" name="farge" value="#ff0000"><br>
+
+
+
+            <label for="bilde">Velg bilde:</label>
+            <input type="file" id="fileInput"><br><br>
+
+            <input onchange="card()" type="radio" name="border1" id="SolidBorder" />
+            Solid<input onchange="card()" type="radio" name="border1" id="DottedBorder" />
+            Outset<input onchange="card()" type="radio" name="border1" id="DashedBorder" />
+            Double
+
+            <br> <br><br><input type="button" id="button" value="Update Card" onclick="updateCard()">
+
+
+        </form>
+    </div>
+
+
+
+    <script>
+
+        let fileInputEl = document.querySelector('#fileInput')
+        fileInputEl.addEventListener('change', handleFileSelect)
+        function handleFileSelect(event) {
+            let file = event.target.files[0]
+            let reader = new FileReader()
+            reader.onload = function (event) {
+                let imagePreviewEl = document.querySelector('#imagePreview')
+                imagePreviewEl.src = event.target.result
+            }
+            reader.readAsDataURL(file)
+        }
+
+        function updateCard() {
+            // Få verdiene
+            var name = document.getElementById("nameInput").value;
+            var title = document.getElementById("titleInput").value;
+            var email = document.getElementById("emailInput").value;
+            var phone = document.getElementById("phoneInput").value;
+            var color = document.getElementById("fargeInput").value;
+            var gender = document.getElementById("genderInput").value;
+            var age = document.getElementById("ageInput").value;
+            var question = document.getElementById("questionInput").value;
+
+
+            // Oppdater kortet
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("title").innerHTML = title;
+            document.getElementById("email").innerHTML = email;
+            document.getElementById("phone").innerHTML = phone;
+            document.querySelector(".card").style.backgroundColor = color;
+            document.getElementById("gender").innerHTML = gender;
+            document.getElementById("age").innerHTML = age;
+            document.getElementById("question").innerHTML = question;
+
+
+
+            image.src = URL.createObjectURL(event.target.files[0]);
+
+            document.querySelector(".card").style.backgroundColor = color;
+
+            function card() {
+                var randomColor = Math.floor(Math.random() * 16777215).toString(16)
+                if (SolidBorderEL.checked == true) {
+                    hovedEl.style.border = 'solid 5px'
+                    hovedEl.style.borderColor = fargeEL.value
+                } else if (DottedBorderEL.checked == true) {
+                    hovedEl.style.border = 'outset 5px'
+                    hovedEl.style.borderColor = fargeEL.value
+                } else if (DashedBorderEL.checked == true) {
+                    hovedEl.style.border = 'double 5px'
+                    hovedEl.style.borderColor = fargeEL.value
+                }
+            }
+        }
+
+
+        var SolidBorderEL = document.querySelector('#SolidBorder')
+        var DottedBorderEL = document.querySelector('#DottedBorder')
+        var DashedBorderEL = document.querySelector('#DashedBorder')
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
