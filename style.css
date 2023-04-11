@@ -1,0 +1,284 @@
+
+#A{
+
+
+color: rgb(63, 4, 4);
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+size: larger;
+font-size: x-large;
+text-shadow: rgba(0, 0, 0, 0.73);
+}
+
+#B{
+
+font-weight: 900;
+font-size: larger;
+text-shadow: black;
+height: 100vh;
+}
+
+#boks1{
+
+    margin-left: 6%;
+    margin-top: 50px;
+    text-align: center;
+    border:3px solid;
+    width: 250px;
+    height: 100px;
+    padding: 1px 10px;
+    background-color: rgba(22, 6, 21, 0.459);
+    
+    }
+#boks1:hover{
+
+background-color: rgb(0, 0, 0);
+color: rgb(255, 0, 157);
+
+
+}
+    
+#boks1 a{
+    text-align: center;
+    color: rgb(255, 0, 157);
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#boks2{
+
+margin-top: -108px;
+margin-left: 30%;
+text-align: center;
+border:3px solid;
+width: 250px;
+height: 100px;
+padding: 1px 10px;
+background-color: rgba(22, 6, 21, 0.459);
+}
+
+#boks2:hover{
+    background-color: rgba(0, 0, 0, 0.73);
+    color: rgb(255, 0, 157);
+
+}
+
+#boks2 a{
+text-align: center;
+color: rgb(255, 0, 157);
+font-size: x-large;
+}
+
+#boks3{
+
+margin-top: -108px;
+margin-left: 52%;
+text-align: center;
+border:3px solid;
+width: 250px;
+height: 100px;
+padding: 1px 10px;
+background-color: rgba(22, 6, 21, 0.459);
+
+}
+
+#boks3:hover{
+background-color: rgba(0, 0, 0, 0.73);
+color: rgb(255, 0, 157);
+}
+
+#boks3 a{
+text-align: center;
+color: rgb(255, 0, 157);
+font-size: x-large;
+}
+
+
+
+#boks4{
+
+    margin-top: -108px;
+    margin-left: 75%;
+    text-align: center;
+    border:3px solid;
+    width: 250px;
+    height: 100px;
+    padding: 1px 10px;
+    background-color: rgba(22, 6, 21, 0.459);
+    
+    }
+    
+    #boks4:hover{
+    background-color: rgba(0, 0, 0, 0.73);
+    color: rgb(255, 0, 157);
+    }
+    
+    #boks4 a{
+    text-align: center;
+    color: rgb(255, 0, 157);
+    font-size: x-large;
+    }
+
+#boks5{
+
+    margin-top: 70px;
+    margin-left: 6%;
+    text-align: center;
+    border:3px solid;
+    width: 250px;
+    height: 100px;
+    padding: 1px 10px;
+    background-color: rgba(22, 6, 21, 0.459);
+    animation-name: example;
+    animation-duration: 4s;
+
+       
+
+}
+
+#boks5:hover{
+    
+    
+    color: rgb(255, 0, 157);
+    background-color: rgba(0, 0, 0, 0.73);
+  
+
+       
+  }      
+    #boks5 a{
+        text-align: center;
+        color: rgb(255, 0, 157);
+        font-size: x-large;
+        }
+
+#boks6{
+
+margin-top: -108px;
+margin-left: 30%;
+text-align: center;
+border:3px solid;
+width: 250px;
+height: 100px;
+padding: 1px 10px;
+background-color: rgba(22, 6, 21, 0.459);
+animation-name: example;
+animation-duration: 4s;
+        
+}
+        
+    #boks6:hover{
+            
+            
+         color: rgb(255, 0, 157);
+         background-color: rgba(0, 0, 0, 0.73);
+          
+        
+}      
+     #boks6 a{
+                text-align: center;
+                color: rgb(255, 0, 157);
+                font-size: x-large;
+                }
+
+#boks7{
+
+margin-top: -108px;
+margin-left: 52%;
+text-align: center;
+border:3px solid;
+width: 250px;
+height: 100px;
+padding: 1px 10px;
+background-color: rgba(22, 6, 21, 0.459);
+animation-name: example;
+animation-duration: 4s;
+                            
+                    }
+                            
+#boks7:hover{
+                                
+                                
+color: rgb(255, 0, 157);
+background-color: rgba(0, 0, 0, 0.73);
+                              
+                            
+}      
+#boks7 a{
+text-align: center;
+color: rgb(255, 0, 157);
+font-size: x-large;
+}
+
+#boks8{
+
+    margin-top: -108px;
+    margin-left: 75%;
+    text-align: center;
+    border:3px solid;
+    width: 250px;
+    height: 100px;
+    padding: 1px 10px;
+    background-color: rgba(22, 6, 21, 0.459);
+    animation-name: example;
+    animation-duration: 4s;
+                                
+                        }
+                        #boks8:hover{
+                                
+                                
+                            color: rgb(255, 0, 157);
+                            background-color: rgba(0, 0, 0, 0.73);
+                            
+                        }
+
+                        #boks8 a{
+                            text-align: center;
+                            color: rgb(255, 0, 157);
+                            font-size: x-large;
+                            }
+
+
+body{   
+    background-image:    
+    linear-gradient(to bottom, rgba(170, 104, 156, 0.747), rgba(0, 0, 0, 0.73)),   
+    url('IMG-MC_Nettside.png');  
+    background-repeat: no-repeat;
+    
+    
+    background-size: 100vw;
+    margin: 0;
+    
+    
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+#a{
+font-size: xx-small;
+margin-top: 490px;
+color: rgba(65, 64, 64, 0.212);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
