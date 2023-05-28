@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function Sum2LikeTall(tall1, tall2, tall3) {
+            if (tall1 == tall2) {
+                a = tall1 + tall2
+                console.log(a)  
+                return a
+            }
+            else if (tall1 == tall3) {
+                b = tall1 + tall3
+                console.log(b)                
+                return b
+            }
+            else if (tall2 == tall3) {
+                c = tall2 + tall3
+                console.log(c)          
+                return c
+            }
+            else {               
+                return false
+            } 
+        }
+
+        Sum2LikeTall(Number(prompt("Tall 1")), Number(prompt("Tall2")), Number(prompt("Tall3")))
+
+    </script>
+</body>
+
+</html>
